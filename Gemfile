@@ -3,7 +3,13 @@ source 'https://rubygems.org'
 ruby "2.0.0"
 gem 'rails',                     '4.1.8'
 
-gem 'sqlite3',                   '1.3.10'
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
 
 gem 'devise',                    '3.4.1'
 gem 'figaro',                    '1.0.0'
